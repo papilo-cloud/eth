@@ -1,0 +1,14 @@
+[
+    {
+        "address": "",
+        "eth": 0,
+        "'hs": 732.48,
+        "workers": 32,
+        "min1Eth": 0.05,
+        "min2Eth": 2.5,
+        "remaintime": "1Hr",
+        "total": 9,
+        "avgreward": 2.75,
+        "boost": 0
+    }
+]

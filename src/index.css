@@ -1,0 +1,366 @@
+*{
+  position: relative;
+  /* width: 100%;
+  height: 100%; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: hsl(217, 54%, 11%);
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+p{
+  font-weight: 400;
+}
+.home, .mine, .claim{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3em;
+}
+.home .card, .mine .mine-val, .claim .claim-mesg{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  /* border-radius: 20px; */
+  background-color: hsl(216, 50%, 16%);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.mine .modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  z-index: 1;
+}
+.mine .balance{
+  position: fixed;
+  width: 90%;
+  left: 50%;
+  height: 250px;
+  background-color: hsl(217, 54%, 11%);
+  border-radius: 20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 17px;
+  display: flex;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.balance .balance-txt{
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  gap: 30px;
+  color: hsl(215, 51%, 70%);
+}
+.balance-txt h3{
+  color: hsl(0, 0%, 100%);
+}
+.balance-txt .butn{
+  align-self: flex-end;
+  gap: 10px;
+  display: flex;
+}
+.butn button{
+  background-color: hsl(215, 51%, 70%);
+  border: 0;
+  color: hsl(217, 54%, 11%);
+  padding: 12px 14px;
+  font-size: .8em;
+  border-radius: 10px;
+}
+.mine .mine-val{
+  padding: 20px;
+  color: hsl(215, 51%, 70%);
+}
+.mine-val .mesg{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mine-val .mesg .text{
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.mine-val .text h2{
+  color: hsl(178, 100%, 50%);
+}
+.mine-val .mesg1{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mine-val .mesg1 .msg{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  padding: 20px 0;
+}
+.mine-val .mesg1 .msg .one{
+  /* width: 100px; */
+  display: flex;
+  gap: 10px;
+  align-items: center;justify-content: flex-end;
+}
+.mine-val .mesg1 .msg .one button{
+  width: 40px;
+  padding: 7px;
+  font-weight: 800;
+}
+.mine-val .mesg1 .msg .one .btn{
+  display: flex;
+  gap: 10px;
+}
+.mine-val button{
+  width: 140px;
+  align-self: center;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1em;
+  background-color: hsl(215, 51%, 70%);
+  font-weight: 600;
+}
+.claim-mesg {
+  padding: 20px;
+  color: hsl(0, 0%, 100%);
+}
+.claim-mesg h2{
+  height: 40px;
+  position: relative;
+}
+.claim-mesg h2::after{
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: hsl(215, 51%, 70%);
+}
+.claim-mesg .txt{
+  position: relative;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.claim-mesg .txt .cont{
+  display: flex;
+  justify-content: space-between;
+  color: hsl(215, 51%, 70%);
+}
+.claim-mesg button{
+  font-size: 1em;
+  width: 200px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 0;
+  background-color: hsl(178, 100%, 50%);
+  color: hsl(217, 54%, 11%);
+  font-weight: 600;
+  align-self: center;
+}
+.claim .reward{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: hsl(215, 51%, 70%);
+}
+.reward .reward-mesg{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.reward-mesg .box{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+.card .card-img{
+  position: relative;
+  width: 100%;
+  padding: 24px;
+}
+.card-img .img, .mine-val .img{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .img img, .mine-val .img img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.form{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 24px;
+}
+.form form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} 
+.form input{
+  width: 100%;
+  background-color: inherit;
+  outline: none;
+  border: 1px solid hsl(215, 32%, 27%);
+  border-radius: 10px;
+  padding: 18px;
+  color: hsl(215, 51%, 70%);
+}
+.form input::placeholder{
+  color: hsl(215, 51%, 70%);
+}
+.form .error{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: rgba(255, 0, 0, 0.2);
+  background: hsl(217, 54%, 11%);
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+.error .error-mesg{
+  position: relative;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.error-mesg span{
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid #f00;
+  border-radius: 10px;
+}
+.form .error-mesg button{
+  width: 100px;
+  padding: 14px;
+  font-size: 1em;
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+}
+.faq{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.faq h2{
+  padding: 20px 24px;
+  color: hsl(0, 0%, 100%);
+}
+.faq .data{
+  position: relative;
+  width: 100%;
+  transition: .4s;
+}
+.data button{
+  position: relative;
+  width: 100%;
+  padding: 24px;
+  border: 0;
+  outline: none;
+  background-color: hsl(217, 54%, 11%);
+  color: hsl(0, 0%, 100%);
+  text-align: left;
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+}
+.form button{
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: hsl(215, 51%, 70%);
+  color: hsl(217, 54%, 11%);
+  border: 0;
+  outline: none;
+  font-size: 1.1em;
+}
+.data button::before{
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: hsl(217, 54%, 11%);
+  bottom: -10px;
+  transform: rotate(45deg);
+  /* z-index: -1; */
+}
+.data .content{
+  position: relative;
+  width: 100%;
+  padding: 24px;
+  display: none;
+  transition: all .4s;
+}
+.data .show{
+  display: block;
+  transition: all .4s;
+}
+.content p{
+  color: hsl(215, 51%, 70%);
+  line-height: 24px;
+}
+@media screen and (min-width: 640px) {
+  .home .card, .mine .mine-val, .claim .claim-mesg{
+    width: 620px;
+  }
+  .card .img, .mine-val .img{
+    height: 400px;
+  }
+  .mine .balance{
+    width: 500px;
+  }
+}
