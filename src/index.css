@@ -19,6 +19,11 @@
 p{
   font-weight: 400;
 }
+button{
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+}
 .home, .mine, .claim{
   position: relative;
   width: 100%;
@@ -149,6 +154,9 @@ p{
   background-color: hsl(215, 51%, 70%);
   font-weight: 600;
 }
+.mine-val .butn1{
+  min-width: 240px;
+}
 .claim-mesg {
   padding: 20px;
   color: hsl(0, 0%, 100%);
@@ -247,39 +255,73 @@ p{
   border: 1px solid hsl(215, 32%, 27%);
   border-radius: 10px;
   padding: 18px;
+  font-size: 1em;
   color: hsl(215, 51%, 70%);
+}
+.form .value1{
+  height: 100px;
+  margin-bottom: 2em;
+  border-color: hsl(178, 100%, 50%);
+}
+.form span{
+  color: hsl(178, 100%, 50%);
+  line-height: 30px;
 }
 .form input::placeholder{
   color: hsl(215, 51%, 70%);
 }
-.form .error{
-  position: absolute;
-  top: 0;
-  left: 0;
+.form button{
   width: 100%;
-  height: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: hsl(215, 51%, 70%);
+  color: hsl(217, 54%, 11%);
+  border: 0;
+  outline: none;
+  font-size: 1.1em;
+}
+.form button:nth-of-type(2){
+  background-color: hsl(215, 32%, 27%);
+  color: hsl(215, 51%, 70%);
+}
+.form .error{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 290px;
+  height: 200px;
   background-color: rgba(255, 0, 0, 0.2);
-  background: hsl(217, 54%, 11%);
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 100;
   padding: 10px;
   display: flex;
-  align-items: flex-end;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+.form .open{
+  display: block;
 }
 .error .error-mesg{
   position: relative;
-  width: 100%;
-  height: 70%;
+  width: 290px;
+  /* height: 200px; */
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  align-self: center;
 }
 .error-mesg span{
   width: 100%;
   height: 70px;
-  background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(255, 225, 225, 0.9);
   border: 1px solid #f00;
+  padding: 10px;
   border-radius: 10px;
+  color: #f00;
 }
 .form .error-mesg button{
   width: 100px;
@@ -318,16 +360,7 @@ p{
   justify-content: space-between;
   border-bottom: 1px solid hsl(215, 32%, 27%);
 }
-.form button{
-  width: 100%;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: hsl(215, 51%, 70%);
-  color: hsl(217, 54%, 11%);
-  border: 0;
-  outline: none;
-  font-size: 1.1em;
-}
+
 .data button::before{
   position: absolute;
   content: '';

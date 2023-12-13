@@ -9,8 +9,8 @@ export const Mining = () => {
     const [start, setStart] = useState(true)
     const [showModal, setShowModal] = useState(false)
     const {id} = useParams()
-    const interval = useRef(0);
-    const modalRef = useRef(null)
+    const interval = useRef(0); 
+    const modalRef = useRef()
 
     const navigate = useNavigate()
 
@@ -25,10 +25,7 @@ export const Mining = () => {
         //     setShowModal(false)
         //   }
         // }
-        // if (modalRef.current.con) {
-            
-        // }
-        // document.body.addEventListener('click', getTarget)
+        // document.documentElement.addEventListener('click', getTarget)
         
         return () => {document.body.style.overflow = 'hiddn';
                       document.body.style.overflow = 'unset';
@@ -58,7 +55,7 @@ export const Mining = () => {
     if (count > 0) {
         ethMined = count / 1000
     }
-    console.log(ethMined)
+
     function handleClaim() {
         navigate(`/claim/${id}`, {replace: true, state:{mine: ethMined, wallet: id}})
     }
@@ -148,7 +145,7 @@ export const Mining = () => {
             <button onClick={start ? handleStart: stop}>
                 {start ? 'Start Mining': 'Stop Mining'}
             </button>:
-            <button onClick={handleClaim}>
+            <button className='butn1' onClick={handleClaim}>
                 Stop Mining and claim reward
                 {/* <Link to={`/claim/${id}`} >
                 </Link> */}
